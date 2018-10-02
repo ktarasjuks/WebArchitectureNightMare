@@ -26,4 +26,9 @@ public class TopBarSteps {
   public void topBarNavigateToCategory(String navBarName) throws Throwable {
     topBar.navigateTo(navBarName);
   }
+
+  @Then("^Top Bar - navigate to \"([^\"]*)\" dropdown category and \"([^\"]*)\" category$")
+  public void topBarNavigateToDropdownCategory(String navBarNameDrpdwn, String categoryName) throws Throwable {
+    topBar.navigateToDropdownElement(navBarNameDrpdwn, categoryName);
+  }
 }

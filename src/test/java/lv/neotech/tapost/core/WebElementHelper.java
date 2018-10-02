@@ -1,6 +1,11 @@
 package lv.neotech.tapost.core;
 
 
+import static lv.neotech.tapost.config.Constants.WAIT_NORMAL_SECONDS;
+import static lv.neotech.tapost.config.Constants.WAIT_SHORT_SECONDS;
+import static org.junit.Assert.fail;
+
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,12 +18,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.List;
-
-import static lv.neotech.tapost.config.Constants.WAIT_NORMAL_SECONDS;
-import static lv.neotech.tapost.config.Constants.WAIT_SHORT_SECONDS;
-import static org.junit.Assert.fail;
 
 @Slf4j
 public class WebElementHelper {
@@ -150,6 +149,12 @@ public class WebElementHelper {
 
         JavascriptExecutor js = (JavascriptExecutor) DriverBase.getDriver();
         js.executeScript("arguments[0].setAttribute('style', 'background-color:coral')", element);
+    }
+
+    public static void hoverOverAndClick(WebElement element, WebElement elementToClick) {
+        Actions builder = new Actions(DriverBase.getDriver());
+        builder.moveToElement(element)
+            .click(elementToClick).build().perform();
     }
 
     public static void clickWithOffset(WebElement element) {

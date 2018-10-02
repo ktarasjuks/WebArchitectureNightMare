@@ -7,7 +7,14 @@ Feature: Search
     Then Top Bar - is displayed
     Then Top Bar - Search Bar is displayed
     Then Top Bar - navigate to "Software" category
+
     Then Product Page - is displayed
     Then Product Page - "Software" category is displayed
+
+    Then Top Bar - navigate to "Laptops & Notebooks" dropdown category and "Show All Laptops & Notebooks" category
+
+
+    Then Product Page - is displayed
+    Then Product Page - "Laptops & Notebooks" category is displayed
 
 
