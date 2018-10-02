@@ -6,14 +6,15 @@ import com.google.inject.Inject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.List;
 
 import cucumber.runtime.java.guice.ScenarioScoped;
-import lv.neotech.tapost.config.ApplicationProperties;
-import lv.neotech.tapost.config.ApplicationProperties.ApplicationProperty;
-import lv.neotech.tapost.core.WebElementHelper;
 import lv.neotech.tapost.pageobjects.base.Page;
 
 import static java.lang.String.format;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @ScenarioScoped
 public class RegistrationPage extends Page {
@@ -26,6 +27,12 @@ public class RegistrationPage extends Page {
 
     @FindBy(css = "input[name='agree'")
     private WebElement agreeCheckbox;
+
+    @FindBy(id = "content")
+    private WebElement afterRegContent;
+
+    @FindBy(css = ".alert-danger")
+    private List<WebElement> errors;
 
     public RegistrationPage() {
     }
@@ -53,9 +60,15 @@ public class RegistrationPage extends Page {
         continueButton.click();
     }
 
-    public static RegistrationPage navigate() {
-        WebElementHelper.navigateToPage(ApplicationProperties.getString(ApplicationProperty.APP_URL));
-        return new RegistrationPage();
+    public void verifyIfRegistered() {
+        verifyNoErrors();
+        ExpectedConditions.visibilityOf(afterRegContent);
+        String afterRegText = afterRegContent.getText();
+        assertThat(afterRegText).contains("Congratulations! Your new account has been successfully created!");
+    }
+
+    private void verifyNoErrors() {
+        assertThat(errors.isEmpty());
     }
 
 }

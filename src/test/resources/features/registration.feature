@@ -9,7 +9,7 @@ Feature: User Registration
     And inputs the following information
       | First Name | Kirill |
       | Last Name | Shepitko |
-      | E-Mail | kirill.shepitko@neotech.lv |
+      | E-Mail | kirill.shepitko2@neotech.lv |
       | Telephone | 29295801 |
       | Password | ThePassword |
       | Password Confirm | ThePassword |

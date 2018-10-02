@@ -43,6 +43,7 @@ public class RegistrationSteps {
 
     @Then("^registration succeeds$")
     public void registrationSucceeds() {
+        registrationPage.verifyIfRegistered();
     }
 
 }
