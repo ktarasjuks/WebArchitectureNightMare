@@ -1,3 +1,4 @@
+@demoshop
 @priority=1
 @search
 Feature: Search

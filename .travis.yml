@@ -41,6 +41,6 @@ jobs:
   - stage: build
     script: ./mvnw clean compile
   - stage: test
-    script: ./mvnw verify -Dbrowser=firefox -Dheadless=true -Dcucumber.options="--tags @google" -DuseWDManager=false
+    script: ./mvnw verify -Dbrowser=firefox -Dheadless=true -Dcucumber.options="--tags @demoshop" -DuseWDManager=false
 
 

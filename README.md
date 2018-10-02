@@ -1,4 +1,4 @@
-testathon102018 [![Build Status](https://travis-ci.com/<account>/<repo>.svg?branch=master)](https://travis-ci.com/<account>/<repo>)
+testathon102018 [![Build Status](https://travis-ci.org/neotechlv/testathon102018.svg?branch=master)](https://travis-ci.org/neotechlv/testathon102018)
 =======================
 
 CucumberJVM template project for running tests in parallel. 

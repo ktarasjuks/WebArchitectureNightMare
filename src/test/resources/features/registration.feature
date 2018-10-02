@@ -1,3 +1,5 @@
+@demoshop
+@priority=1
 @registration
 Feature: User Registration
 
