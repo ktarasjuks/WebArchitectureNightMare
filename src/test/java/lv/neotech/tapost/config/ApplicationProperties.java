@@ -1,11 +1,10 @@
 package lv.neotech.tapost.config;
 
-import lombok.extern.slf4j.Slf4j;
+import static lv.neotech.tapost.config.ApplicationProperties.ApplicationProperty.ENV;
 
 import java.util.HashMap;
 import java.util.Properties;
-
-import static lv.neotech.tapost.config.ApplicationProperties.ApplicationProperty.ENV;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class ApplicationProperties {
@@ -22,8 +21,8 @@ public class ApplicationProperties {
 
                     setProperty(ApplicationProperty.BROWSER.name, "chrome");
                     setProperty(ApplicationProperty.HEADLESS.name, "false");
-                    setProperty(ApplicationProperty.ENABLE_VNC.name, "false");
-                    setProperty(ApplicationProperty.ENABLE_VIDEO.name, "false");
+                    setProperty(ApplicationProperty.ENABLE_VNC.name, "true");
+                    setProperty(ApplicationProperty.ENABLE_VIDEO.name, "true");
 
                     setProperty(ApplicationProperty.PROXY_ENABLED.name, "false");
                     setProperty(ApplicationProperty.PROXY_HOST.name, "proxy.com");

@@ -26,7 +26,7 @@ This project was based on [Selenium-Maven-Template](https://github.com/Ardesco/S
 
 For example, invoking 
 ```
-./mvnw clean verify -P parallelPlugin,nogrid -Dthreads=3 -Dbrowser=chrome -Dcucumber.options="--tags @google"
+./mvnw clean verify -P parallelPlugin,nogrid -Dthreads=3 -Dbrowser=chrome -Dcucumber.options="--tags @demoshop"
 ``` 
 will execute tests in parallel 3 threads on local machine and using *cucumber-jvm-parallel-plugin* plugin. In addition, `-Dbrowser` setting will set browser to Chrome.
 

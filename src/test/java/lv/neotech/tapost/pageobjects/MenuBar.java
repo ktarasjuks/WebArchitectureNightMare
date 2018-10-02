@@ -9,6 +9,7 @@ import lv.neotech.tapost.core.DriverBase;
 import lv.neotech.tapost.core.WebElementHelper;
 import lv.neotech.tapost.pageobjects.base.Page;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -98,6 +99,6 @@ public class MenuBar extends Page {
   }
 
   public void searchFor(String itemToSearch) {
-    WebElementHelper.sendKeys(inputSearchBar, itemToSearch);
+    WebElementHelper.sendKeys(inputSearchBar, itemToSearch, Keys.ENTER);
   }
 }
