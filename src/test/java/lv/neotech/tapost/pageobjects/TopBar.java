@@ -52,11 +52,4 @@ public class TopBar extends Page {
         subOption.click();
     }
 
-//  public void navigateToDropdownElement(String navBarName, String elementToClickText) {
-//    WebElement navBarElement = getNavBarElement(navBarName);
-//    WebElement elementToClick = getNavBarDrodpownElement(elementToClickText);
-//    WebElementHelper.hoverOverAndClick(navBarElement, elementToClick);
-//
-//  }
-
 }
