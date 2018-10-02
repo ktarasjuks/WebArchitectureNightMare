@@ -28,6 +28,11 @@ public class TopBarSteps {
         topBar.clickTopLevelOption(optionName);
     }
 
+    @When("^Top Bar button \"([^\"]*)\" is clickable$")
+    public void topBarButtonIsClickable(String optionName) {
+        topBar.buttonIsClickable(optionName);
+    }
+
     @And("^selects \"([^\"]*)\" option$")
     public void selectsOption(String optionName) throws Throwable {
         topBar.clickSubOption(optionName);
