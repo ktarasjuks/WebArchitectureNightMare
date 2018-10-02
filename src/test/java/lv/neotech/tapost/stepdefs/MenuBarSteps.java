@@ -7,7 +7,7 @@ import cucumber.runtime.java.guice.ScenarioScoped;
 import lv.neotech.tapost.pageobjects.TopBar;
 
 @ScenarioScoped
-public class TopBarSteps {
+public class MenuBarSteps {
 
   private TopBar topBar;
 
