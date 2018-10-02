@@ -36,7 +36,7 @@ public class ShoppingCartPageSteps {
 
     @When("^users add product to shopping cart$")
     public void usersAddProductToShoppingCart() throws Throwable {
-//        mainPage.getProduct(0);
+        mainPage.getProduct(0);
 
     }
 }

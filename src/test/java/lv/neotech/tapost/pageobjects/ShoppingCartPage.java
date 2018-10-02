@@ -15,6 +15,11 @@ public class ShoppingCartPage extends Page {
     @FindBy(id = "checkout-cart")
     private WebElement divShoppingCartPageCobtainer;
 
+    @Override
+    protected WebElement getControlElement() {
+        return divShoppingCartPageCobtainer;
+    }
+
     public ShoppingCartPage() {
         wait.until(ExpectedConditions.visibilityOf(divShoppingCartPageCobtainer));
     }
@@ -27,8 +32,6 @@ public class ShoppingCartPage extends Page {
     public boolean isPageDisplayed() {
         return WebElementHelper.isElementDisplayed(divShoppingCartPageCobtainer);
     }
-
-
 
 
 }

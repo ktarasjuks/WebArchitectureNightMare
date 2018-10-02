@@ -34,10 +34,12 @@ public class MainPage extends Page {
     }
 
     public boolean isPageDisplayed() {
-        return WebElementHelper.isElementDisplayed(divMainPageCobtainer);
+        return WebElementHelper.isElementDisplayed(divMainPageContainer);
     }
 
-
+    public WebElement getProduct(int orderNumber) {
+    return divProducts.get(orderNumber);
+    }
 
 
 }
