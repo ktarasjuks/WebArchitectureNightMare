@@ -22,10 +22,10 @@ public class RegistrationPage extends Page {
     @Inject
     private BreadcrumbsBar breadcrumbsBar;
 
-    @FindBy(css = "input[value='Continue'")
+    @FindBy(css = "input[value='Continue']")
     private WebElement continueButton;
 
-    @FindBy(css = "input[name='agree'")
+    @FindBy(css = "input[name='agree']")
     private WebElement agreeCheckbox;
 
     @FindBy(id = "content")
