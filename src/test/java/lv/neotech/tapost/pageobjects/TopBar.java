@@ -41,6 +41,15 @@ public class TopBar extends Page {
         currentTopLevelOption.click();
     }
 
+    public void buttonIsClickable(String optionName) {
+        currentTopLevelOption = topLinks.stream()
+                .filter((element) -> element.getText().contains(optionName))
+                .findAny()
+                .orElseThrow(() -> new RuntimeException(format("Option '%s' not found", optionName)));
+        currentTopLevelOption.isEnabled();
+    }
+
+
     public void clickSubOption(String subOptionName) {
         checkState(currentTopLevelOption != null);
         By linkSelector = By.cssSelector("ul.dropdown-menu > li > a");

@@ -45,7 +45,7 @@ public class ShoppingCartPageSteps {
 
     @Then("^Shopping Cart Page - is displayed$")
     public void shoppingCartPageIsDisplayed() throws Throwable {
-        shoppingCartPage= new ShoppingCartPage();
+        shoppingCartPage = new ShoppingCartPage();
         assertThat(shoppingCartPage.isPageDisplayed()).isTrue();
     }
 
@@ -53,12 +53,17 @@ public class ShoppingCartPageSteps {
     public void usersAddProductToShoppingCart() throws Throwable {
         mainPage.addProduct();
         shoppingCart.setPrice(mainPage.getProductPrice());
-   }
+    }
 
     @And("^validates the price with product price$")
     public void validatesThePriceWithProductPrice() throws Throwable {
 
         String price = DriverBase.getDriver().findElement(By.xpath("//*[@id=\"content\"]/form/div/table/tbody/tr/td[5]")).getText();
         assertThat(shoppingCart.getPrice()).isEqualTo(price);
+    }
+
+    @And("^check out button is is displayed$")
+    public void checkOutButtonIsIsDisplayed() throws Throwable {
+        shoppingCartPage.isCheckOutButtonDisplayed();
     }
 }
