@@ -9,18 +9,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class NavigationBar extends Page {
+public class TopBar extends Page {
 
     @FindBy(id = "menu")
     private WebElement navNavigationBarCobtainer;
 
-    public NavigationBar() {
+    public TopBar() {
         wait.until(ExpectedConditions.visibilityOf(navNavigationBarCobtainer));
     }
 
-    public static NavigationBar navigate() {
+    public static TopBar navigate() {
         WebElementHelper.navigateToPage(ApplicationProperties.getString(ApplicationProperty.APP_URL));
-        return new NavigationBar();
+        return new TopBar();
     }
 
     public boolean isPageDisplayed() {
