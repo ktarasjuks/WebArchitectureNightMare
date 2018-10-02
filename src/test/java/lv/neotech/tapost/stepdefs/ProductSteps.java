@@ -7,7 +7,7 @@ import cucumber.runtime.java.guice.ScenarioScoped;
 import lv.neotech.tapost.pageobjects.ProductPage;
 
 @ScenarioScoped
-public class SoftwareSteps {
+public class ProductSteps {
 
   private ProductPage productPage;
 
