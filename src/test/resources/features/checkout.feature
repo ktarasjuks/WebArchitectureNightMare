@@ -1,3 +1,4 @@
+@demoshop
 @us06-P1
 @checkout
 @issue=5
