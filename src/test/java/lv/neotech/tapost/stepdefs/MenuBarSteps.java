@@ -1,34 +1,34 @@
 package lv.neotech.tapost.stepdefs;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-
 import cucumber.api.java.en.Then;
 import cucumber.runtime.java.guice.ScenarioScoped;
-import lv.neotech.tapost.pageobjects.TopBar;
+import lv.neotech.tapost.pageobjects.MenuBar;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @ScenarioScoped
 public class MenuBarSteps {
 
-  private TopBar topBar;
+  private MenuBar menuBar;
 
-  @Then("^Top Bar - is displayed$")
+  @Then("^Menu Bar - is displayed$")
   public void navigationBarIsDisplayed() throws Throwable {
-    topBar = new TopBar();
-    assertThat(topBar.isPageDisplayed()).isTrue();
+    menuBar = new MenuBar();
+    assertThat(menuBar.isPageDisplayed()).isTrue();
   }
 
-  @Then("^Top Bar - Search Bar is displayed$")
+  @Then("^Menu Bar - Search Bar is displayed$")
   public void topBarSearchBarIsDisplayed() throws Throwable {
-    assertThat(topBar.isSearchBarDisplayed()).isTrue();
+    assertThat(menuBar.isSearchBarDisplayed()).isTrue();
   }
 
   @Then("^Menu Bar - navigate to \"([^\"]*)\" category$")
   public void topBarNavigateToCategory(String navBarName) throws Throwable {
-    topBar.navigateTo(navBarName);
+    menuBar.navigateTo(navBarName);
   }
 
   @Then("^Menu Bar - navigate to \"([^\"]*)\" dropdown category and \"([^\"]*)\" category$")
   public void topBarNavigateToDropdownCategory(String navBarNameDrpdwn, String categoryName) throws Throwable {
-    topBar.navigateToDropdownElement(navBarNameDrpdwn, categoryName);
+    menuBar.navigateToDropdownElement(navBarNameDrpdwn, categoryName);
   }
 }

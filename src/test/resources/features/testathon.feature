@@ -8,6 +8,6 @@ Feature: Testathon
 
   Scenario: Nav Bar
     Given user navigates to Demo shop
-    Then Top Bar - is displayed
+    Then Menu Bar - is displayed
 #    Then Navigation Bar - navigate to Laptops
 #    Then Laptop site - is displayed

@@ -1,17 +1,19 @@
 package lv.neotech.tapost.pageobjects;
 
 
-import java.util.List;
-import java.util.stream.Collectors;
-import lv.neotech.tapost.config.ApplicationProperties;
-import lv.neotech.tapost.config.ApplicationProperties.ApplicationProperty;
-import lv.neotech.tapost.core.WebElementHelper;
-import lv.neotech.tapost.pageobjects.base.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class TopBar extends Page {
+import java.util.List;
+import java.util.stream.Collectors;
+
+import lv.neotech.tapost.config.ApplicationProperties;
+import lv.neotech.tapost.config.ApplicationProperties.ApplicationProperty;
+import lv.neotech.tapost.core.WebElementHelper;
+import lv.neotech.tapost.pageobjects.base.Page;
+
+public class MenuBar extends Page {
 
 
   @FindBy(id = "menu")
@@ -32,7 +34,7 @@ public class TopBar extends Page {
     return  navNavigationBarContainer.findElement(By.xpath("//*[@class='dropdown']//a[text()='" + text + "']"));
   }
 
-  public TopBar() {
+  public MenuBar() {
     waitUntilLoaded();
   }
 
@@ -41,9 +43,9 @@ public class TopBar extends Page {
     return navNavigationBarContainer;
   }
 
-  public static TopBar navigate() {
+  public static MenuBar navigate() {
     WebElementHelper.navigateToPage(ApplicationProperties.getString(ApplicationProperty.APP_URL));
-    return new TopBar();
+    return new MenuBar();
   }
 
   public boolean isPageDisplayed() {

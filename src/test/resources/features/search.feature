@@ -4,8 +4,8 @@ Feature: Search
 
   Scenario: Nav Bar
     Given user navigates to Demo shop
-    Then Top Bar - is displayed
-    Then Top Bar - Search Bar is displayed
+    Then Menu Bar - is displayed
+    Then Menu Bar - Search Bar is displayed
     Then Menu Bar - navigate to "Software" category
 
     Then Product Page - is displayed
