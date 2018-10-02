@@ -2,7 +2,7 @@
 @shoppingCart
 @issue=6
 @demoshop
-Feature: Checkout
+Feature: Shopping cart management
 
   Scenario: Adding item to shopping cart
     Given user navigates to Demo shop

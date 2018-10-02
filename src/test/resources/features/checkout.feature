@@ -3,7 +3,7 @@
 @checkout
 @issue=5
 
-Feature: Shopping cart management
+Feature:  cart management
 
   Scenario Outline: Shopping Cart is displayed at all pages
     Given user navigates to Demo shop
