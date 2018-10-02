@@ -1,4 +1,4 @@
-@all
+@demoshop
 Feature: Testathon
 
   Scenario: Testathon
