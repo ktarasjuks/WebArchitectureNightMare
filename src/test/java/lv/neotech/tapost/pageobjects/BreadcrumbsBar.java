@@ -21,4 +21,11 @@ public class BreadcrumbsBar extends Page {
         return breadcrumbs.get(0);
     }
 
+    public List<WebElement> getBreadcrumbs() {
+        return breadcrumbs;
+    }
+
+    public String getLastCrumb() {
+        return breadcrumbs.isEmpty() ? null : breadcrumbs.get(breadcrumbs.size()-1).getText();
+    }
 }
