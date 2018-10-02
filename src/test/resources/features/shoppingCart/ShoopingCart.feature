@@ -10,6 +10,7 @@ Feature: Shopping cart management
     When user navigates to Shopping Cart page
     Then Shopping Cart Page - is displayed
     And validates the price with product price
+    And check out button is is displayed
 
   Scenario Outline: Shopping Cart is displayed at all pages
     Given user navigates to Demo shop
