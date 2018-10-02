@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"pretty", "html:target/cucumber/all", "json:target/cucumber/cucumber-all.json"},
-        features = {"src/test/resources/features/"},
-        tags = {"@demoshop"},
+        features = {"src/test/resources/features"},
+        tags = {"@shoppingCart"},
         glue = {"lv.neotech.tapost.stepdefs", "lv.neotech.tapost.hooks"}
 )
 public class RunCukesTest {
