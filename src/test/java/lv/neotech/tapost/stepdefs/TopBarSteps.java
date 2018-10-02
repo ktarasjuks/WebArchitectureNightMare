@@ -22,12 +22,12 @@ public class TopBarSteps {
     assertThat(topBar.isSearchBarDisplayed()).isTrue();
   }
 
-  @Then("^Top Bar - navigate to \"([^\"]*)\" category$")
+  @Then("^Menu Bar - navigate to \"([^\"]*)\" category$")
   public void topBarNavigateToCategory(String navBarName) throws Throwable {
     topBar.navigateTo(navBarName);
   }
 
-  @Then("^Top Bar - navigate to \"([^\"]*)\" dropdown category and \"([^\"]*)\" category$")
+  @Then("^Menu Bar - navigate to \"([^\"]*)\" dropdown category and \"([^\"]*)\" category$")
   public void topBarNavigateToDropdownCategory(String navBarNameDrpdwn, String categoryName) throws Throwable {
     topBar.navigateToDropdownElement(navBarNameDrpdwn, categoryName);
   }
