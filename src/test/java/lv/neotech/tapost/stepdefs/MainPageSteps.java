@@ -18,7 +18,7 @@ public class MainPageSteps {
   DataHolderDI dataHolder;
 
   @Given("^user navigates to Demo shop$")
-  public void iNavigateToGoogleCom() {
+  public void userNavigatesToDemoShop() {
     mainPage = MainPage.navigate();
     assertThat(mainPage.isPageDisplayed()).isTrue();
   }
