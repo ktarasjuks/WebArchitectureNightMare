@@ -4,12 +4,12 @@ import com.google.inject.Inject;
 
 import java.util.Map;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.runtime.java.guice.ScenarioScoped;
 import lombok.extern.slf4j.Slf4j;
 import lv.neotech.tapost.pageobjects.RegistrationPage;
+import lv.neotech.tapost.pageobjects.TopBar;
 import lv.neotech.tapost.util.DataHolderDI;
 
 @ScenarioScoped
@@ -17,24 +17,32 @@ import lv.neotech.tapost.util.DataHolderDI;
 public class RegistrationSteps {
 
     @Inject
-    DataHolderDI dataHolder;
+    private DataHolderDI dataHolder;
 
     @Inject
-    RegistrationPage registrationPage;
+    private RegistrationPage registrationPage;
 
-    @And("^selects \"([^\"]*)\" option$")
-    public void selectsOption(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
+    @Inject
+    private TopBar topBar;
+
 
     @And("^inputs the following information$")
-    public void inputsTheFollowingInformation(Map<String, String> fieldsToValues) throws Throwable {
+    public void inputsTheFollowingInformation(Map<String, String> fieldsToValues)  {
         fieldsToValues.forEach((key, value) -> registrationPage.setInputFieldValue(key, value));
     }
 
+    @And("^clicks Agree to Policy$")
+    public void clickAgree() {
+        registrationPage.clickAgree();
+    }
+
+    @And("^clicks Continue$")
+    public void clickContinue() {
+        registrationPage.clickContinue();
+    }
+
     @Then("^registration succeeds$")
-    public void registrationSucceeds() throws Throwable {
+    public void registrationSucceeds() {
     }
 
 }

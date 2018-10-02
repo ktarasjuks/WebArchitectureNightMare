@@ -5,6 +5,7 @@ import com.google.inject.Inject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import cucumber.runtime.java.guice.ScenarioScoped;
 import lv.neotech.tapost.config.ApplicationProperties;
@@ -19,6 +20,12 @@ public class RegistrationPage extends Page {
 
     @Inject
     private BreadcrumbsBar breadcrumbsBar;
+
+    @FindBy(css = "input[value='Continue'")
+    private WebElement continueButton;
+
+    @FindBy(css = "input[name='agree'")
+    private WebElement agreeCheckbox;
 
     public RegistrationPage() {
     }
@@ -36,6 +43,14 @@ public class RegistrationPage extends Page {
     public void setInputFieldValue(String fieldName, String value) {
         WebElement element = driver.findElement(By.cssSelector(format("input[placeholder='%s']", fieldName)));
         element.sendKeys(value);
+    }
+
+    public void clickAgree() {
+        agreeCheckbox.click();
+    }
+
+    public void clickContinue() {
+        continueButton.click();
     }
 
     public static RegistrationPage navigate() {

@@ -13,7 +13,7 @@ public class BreadcrumbsBar extends Page {
     private List<WebElement> breadcrumbs;
 
     public BreadcrumbsBar() {
-        waitUntilLoaded();
+//        waitUntilLoaded();
     }
 
     @Override
