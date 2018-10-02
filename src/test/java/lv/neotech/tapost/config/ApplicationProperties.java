@@ -30,8 +30,7 @@ public class ApplicationProperties {
                     setProperty(ApplicationProperty.PROXY_PORT.name, "8080");
 
                     //application URL's
-                    setProperty(ApplicationProperty.APP_URL.name, "https://alfa.cinamonkino.com");
-                    setProperty(ApplicationProperty.GOOGLE_URL.name, "https://google.com");
+                    setProperty(ApplicationProperty.APP_URL.name, "http://demoshop24.com/");
 
                     //Selenium grid settings
                     setProperty(ApplicationProperty.REMOTE_DRIVER.name, "false");
