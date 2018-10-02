@@ -20,6 +20,11 @@ public class GoogleSearchSteps {
     googlePage = GooglePage.navigate();
   }
 
+  @Given("^I navigate to demoshop24 page")
+  public void iNavigateToDemoshop() throws Throwable {
+
+  }
+
   @When("^I search for \"([^\"]*)\"$")
   public void iSearchFor(String searchItem) throws Throwable {
     googlePage.searchFor(searchItem);
