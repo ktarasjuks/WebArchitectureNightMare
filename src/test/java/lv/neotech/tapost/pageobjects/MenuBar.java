@@ -24,6 +24,8 @@ public class MenuBar extends Page {
   @FindBy(css = "#search.input")
   private WebElement inputSearchBar;
 
+  @FindBy(id = "cart")
+  private WebElement shoppingCart;
 
   @FindBy(css = ".navbar-nav > li")
   private List<WebElement> navBarElements;
@@ -52,10 +54,12 @@ public class MenuBar extends Page {
   public boolean isPageDisplayed() {
     return WebElementHelper.isElementDisplayed(navNavigationBarContainer);
   }
-
-
   public boolean isSearchBarDisplayed() {
     return WebElementHelper.isElementDisplayed(navNavigationBarContainer);
+  }
+
+  public boolean isShoppingCartDisplayed() {
+    return WebElementHelper.isElementDisplayed(shoppingCart);
   }
 
   private WebElement getShoppingCartElement(){
