@@ -18,7 +18,7 @@ public class MainPageSteps {
   DataHolderDI dataHolder;
 
   @Given("^user navigates to Demo shop$")
-  public void iNavigateToGoogleCom() throws Throwable {
+  public void userNavigatesToDemoShop() throws Throwable {
     mainPage = MainPage.navigate();
   }
 
