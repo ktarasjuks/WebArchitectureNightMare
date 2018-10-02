@@ -27,6 +27,8 @@ public class MenuBar extends Page {
   @FindBy(id = "cart")
   private WebElement shoppingCart;
 
+
+
   @FindBy(css = ".navbar-nav > li")
   private List<WebElement> navBarElements;
 
@@ -59,6 +61,9 @@ public class MenuBar extends Page {
   }
 
   public boolean isShoppingCartDisplayed() {
+    return WebElementHelper.isElementDisplayed(shoppingCart);
+  }
+  public boolean isCheckOutDisplayed() {
     return WebElementHelper.isElementDisplayed(shoppingCart);
   }
 

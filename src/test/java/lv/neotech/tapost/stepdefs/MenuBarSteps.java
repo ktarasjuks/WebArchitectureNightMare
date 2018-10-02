@@ -27,6 +27,11 @@ public class MenuBarSteps {
     assertThat(menuBar.isShoppingCartDisplayed()).isTrue();
   }
 
+  @Then("^Menu Bar - Checkout is displayed$")
+  public void topBarCheckoutIsDisplayed() throws Throwable {
+    assertThat(menuBar.isShoppingCartDisplayed()).isTrue();
+  }
+
   @Then("^Menu Bar - navigate to \"([^\"]*)\" category$")
   public void topBarNavigateToCategory(String navBarName) throws Throwable {
     menuBar.navigateTo(navBarName);

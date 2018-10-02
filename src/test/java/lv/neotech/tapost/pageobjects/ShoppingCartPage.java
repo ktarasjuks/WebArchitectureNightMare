@@ -15,6 +15,9 @@ public class ShoppingCartPage extends Page {
     @FindBy(id = "checkout-cart")
     private WebElement divShoppingCartPageCobtainer;
 
+    @FindBy(xpath = "//*[@id=\"content\"]/div[3]/div[2]/a")
+    private WebElement checkOutButton;
+
     @Override
     protected WebElement getControlElement() {
         return divShoppingCartPageCobtainer;
@@ -32,7 +35,9 @@ public class ShoppingCartPage extends Page {
     public boolean isPageDisplayed() {
         return WebElementHelper.isElementDisplayed(divShoppingCartPageCobtainer);
     }
-
+    public boolean isCheckOutButtonDisplayed() {
+        return WebElementHelper.isElementDisplayed(checkOutButton);
+    }
 
 
 
