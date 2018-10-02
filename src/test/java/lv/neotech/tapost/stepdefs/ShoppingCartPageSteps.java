@@ -16,8 +16,8 @@ import lv.neotech.tapost.core.DriverBase;
 import lv.neotech.tapost.core.WebElementHelper;
 import lv.neotech.tapost.model.ShoppingCart;
 import lv.neotech.tapost.pageobjects.MainPage;
+import lv.neotech.tapost.pageobjects.MenuBar;
 import lv.neotech.tapost.pageobjects.ShoppingCartPage;
-import lv.neotech.tapost.pageobjects.TopBar;
 import lv.neotech.tapost.util.DataHolderDI;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -32,14 +32,14 @@ public class ShoppingCartPageSteps {
     private MainPage mainPage;
 
     @Inject
-    private TopBar topBar;
+    private MenuBar menuBar;
 
     @Inject
     DataHolderDI dataHolder;
 
     @Given("^user navigates to Shopping Cart page$")
     public void userNavigatesToShoppingCart() throws Throwable {
-        topBar.navigateToShoppingCart();
+        menuBar.navigateToShoppingCart();
     }
 
 
