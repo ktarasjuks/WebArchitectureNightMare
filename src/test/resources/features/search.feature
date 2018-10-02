@@ -1,9 +1,10 @@
-@demoshop
-Feature: Testathon
+@priority=1
+@search
+Feature: Search
 
   Scenario: Testathon
     Given user navigates to Demo shop
-    Then Main Page - is displayed
+    Then Top Bar - is displayed
 
 
   Scenario: Nav Bar
