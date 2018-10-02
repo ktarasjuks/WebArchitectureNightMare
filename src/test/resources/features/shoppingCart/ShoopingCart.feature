@@ -9,7 +9,7 @@ Feature: Shopping cart management
     When users add product to shopping cart
     When user navigates to Shopping Cart page
     Then Shopping Cart Page - is displayed
-#    And validates the price with product price
+    And validates the price with product price
 
 
 

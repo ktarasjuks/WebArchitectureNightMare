@@ -28,6 +28,10 @@ public class TopBar extends Page {
     @FindBy(css = ".navbar-nav > li")
     private List<WebElement> navBarElements;
 
+    private WebElement getShoppingCartElement(){
+        return DriverBase.getDriver().findElement(By.xpath("//*[@id='top']//a[@title='Shopping Cart']"));
+    }
+
 
     public TopBar() {
         waitUntilLoaded();
@@ -44,7 +48,7 @@ public class TopBar extends Page {
     }
 
     public void navigateToShoppingCart() {
-        DriverBase.getDriver().findElement(new By.ByLinkText("Shopping Cart")).click();
+        getShoppingCartElement().click();
     }
     public boolean isPageDisplayed() {
         return WebElementHelper.isElementDisplayed(navNavigationBarContainer);

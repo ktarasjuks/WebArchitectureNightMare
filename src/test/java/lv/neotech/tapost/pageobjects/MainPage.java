@@ -46,7 +46,13 @@ public class MainPage extends Page {
 
     public void addProduct() {
         getProduct(0).findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[3]/button[1]/span")).click();
+            }
+    public String getProductPrice() {
+        String price = getProduct(0).findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[2]/p[2]/span")).getText();
+        price = price.replace("Ex Tax: ","");
+        return price;
     }
+
 
 
 }

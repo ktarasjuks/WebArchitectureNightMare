@@ -25,7 +25,7 @@ public class ShoppingCartPage extends Page {
     }
 
     public static ShoppingCartPage navigate() {
-        WebElementHelper.navigateToPage("http://demoshop24.com/index.php?route=checkout/cart");//ApplicationProperties.getString(ApplicationProperty.APP_URL));
+//        WebElementHelper.navigateToPage("http://demoshop24.com/index.php?route=checkout/cart");//ApplicationProperties.getString(ApplicationProperty.APP_URL));
         return new ShoppingCartPage();
     }
 
