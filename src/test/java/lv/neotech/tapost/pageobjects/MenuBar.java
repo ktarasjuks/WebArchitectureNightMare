@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 import lv.neotech.tapost.config.ApplicationProperties;
 import lv.neotech.tapost.config.ApplicationProperties.ApplicationProperty;
+import lv.neotech.tapost.core.DriverBase;
 import lv.neotech.tapost.core.WebElementHelper;
 import lv.neotech.tapost.pageobjects.base.Page;
 
@@ -57,6 +58,13 @@ public class MenuBar extends Page {
     return WebElementHelper.isElementDisplayed(navNavigationBarContainer);
   }
 
+  private WebElement getShoppingCartElement(){
+    return DriverBase.getDriver().findElement(By.xpath("//*[@id='top']//a[@title='Shopping Cart']"));
+  }
+
+  public void navigateToShoppingCart() {
+    getShoppingCartElement().click();
+  }
 
   public WebElement getNavBarElement(String navBarName) {
     List<WebElement> list = navBarElements.stream().filter(el -> el.getText().equals(navBarName))
