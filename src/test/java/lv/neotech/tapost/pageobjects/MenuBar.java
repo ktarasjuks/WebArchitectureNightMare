@@ -1,18 +1,16 @@
 package lv.neotech.tapost.pageobjects;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
 import java.util.List;
 import java.util.stream.Collectors;
-
 import lv.neotech.tapost.config.ApplicationProperties;
 import lv.neotech.tapost.config.ApplicationProperties.ApplicationProperty;
 import lv.neotech.tapost.core.DriverBase;
 import lv.neotech.tapost.core.WebElementHelper;
 import lv.neotech.tapost.pageobjects.base.Page;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class MenuBar extends Page {
 
@@ -21,7 +19,7 @@ public class MenuBar extends Page {
   private WebElement navNavigationBarContainer;
 
 
-  @FindBy(css = "#search.input")
+  @FindBy(css = "#search input")
   private WebElement inputSearchBar;
 
   @FindBy(id = "cart")
@@ -57,7 +55,7 @@ public class MenuBar extends Page {
     return WebElementHelper.isElementDisplayed(navNavigationBarContainer);
   }
   public boolean isSearchBarDisplayed() {
-    return WebElementHelper.isElementDisplayed(navNavigationBarContainer);
+    return WebElementHelper.isElementDisplayed(inputSearchBar);
   }
 
   public boolean isShoppingCartDisplayed() {
@@ -99,4 +97,7 @@ public class MenuBar extends Page {
 
   }
 
+  public void searchFor(String itemToSearch) {
+    WebElementHelper.sendKeys(inputSearchBar, itemToSearch);
+  }
 }

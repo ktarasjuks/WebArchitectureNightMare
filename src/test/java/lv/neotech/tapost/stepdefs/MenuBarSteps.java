@@ -1,10 +1,10 @@
 package lv.neotech.tapost.stepdefs;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 import cucumber.api.java.en.Then;
 import cucumber.runtime.java.guice.ScenarioScoped;
 import lv.neotech.tapost.pageobjects.MenuBar;
-
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @ScenarioScoped
 public class MenuBarSteps {
@@ -40,5 +40,10 @@ public class MenuBarSteps {
   @Then("^Menu Bar - navigate to \"([^\"]*)\" dropdown category and \"([^\"]*)\" category$")
   public void topBarNavigateToDropdownCategory(String navBarNameDrpdwn, String categoryName) throws Throwable {
     menuBar.navigateToDropdownElement(navBarNameDrpdwn, categoryName);
+  }
+
+  @Then("^Menu Bar - search for \"([^\"]*)\"$")
+  public void menuBarTypeFollowingIntoSearchBar(String itemToSearch) throws Throwable {
+    menuBar.searchFor(itemToSearch);
   }
 }

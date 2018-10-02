@@ -1,6 +1,7 @@
 @us05-P1
 @shoppingCart
-
+@issue=6
+@demoshop
 Feature: Shopping cart management
 
   Scenario: Adding item to shopping cart

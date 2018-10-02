@@ -1,5 +1,6 @@
 @us06-P1
 @checkout
+@issue=5
 
 Feature: Shopping cart management
 

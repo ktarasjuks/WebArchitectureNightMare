@@ -1,6 +1,7 @@
 @demoshop
 @priority=1
 @registration
+@issue=1
 Feature: User Registration
 
   Scenario: User Registration with all mandatory fields defined
